@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | Desenvolvedor</title>
+  <title>Portfólio | UI Developer</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
     * {
       margin: 0;
       padding: 0;
@@ -12,36 +14,11 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      color: #333;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0A0A0A;
+      color: #FFFFFF;
+      line-height: 1.6;
       overflow-x: hidden;
-    }
-
-    /* Partículas de fundo */
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .particle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
-      50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
     }
 
     /* Navbar */
@@ -49,448 +26,612 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(10, 10, 10, 0.95);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       z-index: 1000;
       padding: 20px 0;
-      transition: all 0.3s ease;
-    }
-
-    nav.scrolled {
-      background: rgba(0, 0, 0, 0.9);
     }
 
     .nav-container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 30px;
+      padding: 0 40px;
     }
 
     .logo {
       font-size: 24px;
       font-weight: 800;
-      background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
     }
 
     .nav-links {
       display: flex;
-      gap: 30px;
+      gap: 40px;
       list-style: none;
     }
 
     .nav-links a {
-      color: white;
+      color: #888888;
       text-decoration: none;
       font-weight: 500;
-      padding: 8px 16px;
-      border-radius: 25px;
+      font-size: 15px;
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
     }
 
-    .nav-links a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #ff6b6b, #ffd93d);
-      transition: left 0.3s ease;
-      z-index: -1;
+    .nav-links a:hover {
+      color: #8B5CF6;
+      border-bottom-color: #8B5CF6;
     }
 
-    .nav-links a:hover::before {
-      left: 0;
+    .cta-button {
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
     }
 
-    /* Container principal */
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    }
+
+    /* Main Container */
     .main-container {
       margin-top: 80px;
-      position: relative;
-      z-index: 2;
+      min-height: calc(100vh - 80px);
     }
 
-    /* Botões de navegação */
+    /* Tab Navigation */
     .tab-navigation {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 8px;
       padding: 40px 20px;
-      flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     .tab-btn {
-      padding: 15px 30px;
-      border: none;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      color: white;
+      padding: 12px 24px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #888888;
       border-radius: 50px;
       cursor: pointer;
-      font-weight: 600;
-      font-size: 16px;
+      font-weight: 500;
+      font-size: 14px;
       transition: all 0.3s ease;
-      border: 2px solid transparent;
-      position: relative;
-      overflow: hidden;
+      font-family: 'Inter', sans-serif;
     }
 
-    .tab-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      transition: left 0.3s ease;
-      z-index: -1;
-    }
-
-    .tab-btn:hover::before,
-    .tab-btn.active::before {
-      left: 0;
+    .tab-btn:hover {
+      border-color: #8B5CF6;
+      color: #FFFFFF;
     }
 
     .tab-btn.active {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      border-color: transparent;
+      color: #FFFFFF;
     }
 
-    /* Conteúdo das abas */
+    /* Tab Content */
     .tab-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 30px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border-radius: 30px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-      margin-bottom: 40px;
       display: none;
-      animation: slideIn 0.6s ease;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+      animation: fadeIn 0.6s ease;
     }
 
     .tab-content.active {
       display: block;
     }
 
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(30px); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .tab-content h2 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-      background: linear-gradient(45deg, #667eea, #764ba2);
+    /* Hero Section */
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 80px;
+      align-items: center;
+      min-height: 70vh;
+      margin-bottom: 100px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+
+    .hero-content .highlight {
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: #888888;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .stat-item {
       text-align: center;
     }
 
-    .tab-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #8B5CF6;
+      display: block;
     }
 
-    /* Seção Sobre */
-    .hero-section {
-      text-align: center;
-      padding: 40px 0;
+    .stat-label {
+      font-size: 12px;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
     }
 
-    .profile-image {
-      width: 150px;
-      height: 150px;
+    .hero-image {
+      position: relative;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-      margin: 0 auto 30px;
+    }
+
+    .profile-placeholder {
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: #888888;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+      margin-bottom: 100px;
+    }
+
+    .project-card {
+      background: #111111;
+      border-radius: 16px;
+      padding: 0;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: #8B5CF6;
+      box-shadow: 0 20px 60px rgba(139, 92, 246, 0.2);
+    }
+
+    .project-image {
+      height: 240px;
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 4rem;
       color: white;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-      animation: pulse 2s infinite;
     }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
-      70% { box-shadow: 0 0 0 20px rgba(255, 107, 107, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+    .project-content {
+      padding: 32px;
     }
 
-    /* Grid de projetos */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .project-card {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      padding: 30px;
-      border-radius: 20px;
-      color: white;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, #ff6b6b, #ffd93d);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    }
-
-    .project-card > * {
-      position: relative;
-      z-index: 2;
-    }
-
-    .project-card h3 {
+    .project-content h3 {
       font-size: 1.5rem;
-      margin-bottom: 15px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #FFFFFF;
     }
 
-    /* Grid de habilidades */
+    .project-content p {
+      color: #888888;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: rgba(139, 92, 246, 0.1);
+      color: #8B5CF6;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Skills Grid */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 100px;
     }
 
-    .skill-item {
-      background: rgba(102, 126, 234, 0.1);
-      padding: 25px;
-      border-radius: 15px;
+    .skill-card {
+      background: #111111;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       text-align: center;
       transition: all 0.3s ease;
-      border: 2px solid transparent;
     }
 
-    .skill-item:hover {
-      background: rgba(102, 126, 234, 0.2);
-      transform: translateY(-5px);
-      border-color: #667eea;
+    .skill-card:hover {
+      border-color: #8B5CF6;
+      transform: translateY(-4px);
     }
 
-    .skill-item i {
-      font-size: 3rem;
-      color: #667eea;
-      margin-bottom: 15px;
-      display: block;
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.8rem;
     }
 
-    /* Contato */
+    .skill-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .skill-card p {
+      color: #888888;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* Contact Section */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 100px;
     }
 
-    .contact-item {
-      background: linear-gradient(135deg, #4ecdc4, #44a08d);
-      padding: 30px;
-      border-radius: 20px;
-      color: white;
+    .contact-card {
+      background: #111111;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       text-align: center;
       transition: all 0.3s ease;
       cursor: pointer;
     }
 
-    .contact-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    .contact-card:hover {
+      border-color: #8B5CF6;
+      transform: translateY(-4px);
     }
 
-    .contact-item i {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-      display: block;
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #8B5CF6, #A855F7);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.5rem;
     }
 
-    /* Responsividade */
+    .contact-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .contact-card p {
+      color: #8B5CF6;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero-image {
+        height: 300px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       .nav-container {
         padding: 0 20px;
       }
-      
+
       .nav-links {
-        gap: 15px;
+        display: none;
       }
-      
-      .nav-links a {
-        padding: 6px 12px;
-        font-size: 14px;
-      }
-      
-      .tab-navigation {
-        gap: 10px;
-      }
-      
-      .tab-btn {
-        padding: 12px 20px;
-        font-size: 14px;
-      }
-      
+
       .tab-content {
-        margin: 0 20px 40px;
-        padding: 30px 20px;
+        padding: 0 20px;
       }
-      
-      .tab-content h2 {
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .section-header h2 {
         font-size: 2rem;
       }
-    }
 
-    /* Ícones usando pseudo-elementos */
-    .skill-frontend::before { content: '🎨'; font-size: 3rem; display: block; margin-bottom: 15px; }
-    .skill-backend::before { content: '⚙️'; font-size: 3rem; display: block; margin-bottom: 15px; }
-    .skill-database::before { content: '🗄️'; font-size: 3rem; display: block; margin-bottom: 15px; }
-    .skill-mobile::before { content: '📱'; font-size: 3rem; display: block; margin-bottom: 15px; }
-    
-    .contact-email::before { content: '✉️'; font-size: 2.5rem; display: block; margin-bottom: 15px; }
-    .contact-github::before { content: '🐙'; font-size: 2.5rem; display: block; margin-bottom: 15px; }
-    .contact-linkedin::before { content: '💼'; font-size: 2.5rem; display: block; margin-bottom: 15px; }
+      .projects-grid,
+      .skills-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Partículas de fundo -->
-  <div class="particles" id="particles"></div>
-
   <!-- Navbar -->
-  <nav id="navbar">
+  <nav>
     <div class="nav-container">
-      <div class="logo">DEV.Portfolio</div>
+      <div class="logo">UI.</div>
       <ul class="nav-links">
         <li><a href="https://trabalho-finalweb.vercel.app/" target="_blank">Projeto Web</a></li>
         <li><a href="https://supermercado-prototipo.vercel.app/" target="_blank">E-commerce</a></li>
         <li><a href="https://10-api-rest.vercel.app/" target="_blank">API Rest</a></li>
       </ul>
+      <button class="cta-button" onclick="openTab('contato')">CONTATO</button>
     </div>
   </nav>
 
   <div class="main-container">
-    <!-- Navegação por abas -->
+    <!-- Tab Navigation -->
     <div class="tab-navigation">
-      <button class="tab-btn active" onclick="openTab('sobre')">Sobre Mim</button>
+      <button class="tab-btn active" onclick="openTab('sobre')">Sobre</button>
       <button class="tab-btn" onclick="openTab('projetos')">Projetos</button>
       <button class="tab-btn" onclick="openTab('habilidades')">Habilidades</button>
       <button class="tab-btn" onclick="openTab('contato')">Contato</button>
     </div>
 
-    <!-- Conteúdo: Sobre -->
+    <!-- Sobre Section -->
     <div id="sobre" class="tab-content active">
       <div class="hero-section">
-        <div class="profile-image">👨‍💻</div>
-        <h2>Sobre Mim</h2>
-        <p>Sou um desenvolvedor apaixonado por criar experiências digitais incríveis. Com foco em desenvolvimento web moderno, sempre busco implementar as melhores práticas e tecnologias mais atuais para entregar soluções de qualidade.</p>
-        <p>Minha jornada na programação começou com curiosidade e se transformou em paixão. Atualmente, trabalho com tecnologias como HTML5, CSS3, JavaScript, React, Node.js e muito mais.</p>
-        <p>Acredito que a programação é uma forma de arte digital, onde cada linha de código contribui para criar algo único e funcional.</p>
+        <div class="hero-content">
+          <h1>UI <span class="highlight">DEVELOPER</span></h1>
+          <p>Desenvolvedor especializado em criar experiências digitais excepcionais. Combinando design moderno com código limpo para entregar soluções que realmente funcionam.</p>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">15</span>
+              <span class="stat-label">PROJETOS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">ANOS</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">SATISFAÇÃO</span>
+            </div>
+          </div>
+
+          <button class="cta-button" onclick="openTab('projetos')">VER PROJETOS</button>
+        </div>
+        
+        <div class="hero-image">
+          <div class="profile-placeholder">👨‍💻</div>
+        </div>
       </div>
     </div>
 
-    <!-- Conteúdo: Projetos -->
+    <!-- Projetos Section -->
     <div id="projetos" class="tab-content">
-      <h2>Meus Projetos</h2>
+      <div class="section-header">
+        <h2>PROJETOS</h2>
+        <p>Uma seleção dos meus trabalhos mais recentes, focados em UI/UX e desenvolvimento web moderno.</p>
+      </div>
+
       <div class="projects-grid">
         <div class="project-card" onclick="window.open('https://trabalho-finalweb.vercel.app/', '_blank')">
-          <h3>🌐 Projeto Web Completo</h3>
-          <p>Um projeto web completo desenvolvido com HTML5, CSS3 e JavaScript vanilla, demonstrando técnicas modernas de desenvolvimento front-end.</p>
+          <div class="project-image">🌐</div>
+          <div class="project-content">
+            <h3>Web Template UI</h3>
+            <p>Interface moderna e responsiva desenvolvida com foco na experiência do usuário. Clean design com animações suaves.</p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </div>
         </div>
+
         <div class="project-card" onclick="window.open('https://supermercado-prototipo.vercel.app/', '_blank')">
-          <h3>🛒 E-commerce Prototype</h3>
-          <p>Protótipo de um supermercado online com interface intuitiva, carrinho de compras e sistema de gerenciamento de produtos.</p>
+          <div class="project-image">🛒</div>
+          <div class="project-content">
+            <h3>E-commerce Platform</h3>
+            <p>Plataforma completa de e-commerce com design moderno, sistema de carrinho e interface intuitiva para usuários.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">E-commerce</span>
+              <span class="tag">Mobile</span>
+            </div>
+          </div>
         </div>
+
         <div class="project-card" onclick="window.open('https://10-api-rest.vercel.app/', '_blank')">
-          <h3>🔌 API RESTful</h3>
-          <p>Desenvolvimento de uma API REST robusta com documentação completa, seguindo as melhores práticas de arquitetura.</p>
+          <div class="project-image">⚡</div>
+          <div class="project-content">
+            <h3>REST API Interface</h3>
+            <p>Dashboard para gerenciamento de API REST com documentação interativa e interface administrativa completa.</p>
+            <div class="project-tags">
+              <span class="tag">API</span>
+              <span class="tag">Dashboard</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Admin</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Conteúdo: Habilidades -->
+    <!-- Habilidades Section -->
     <div id="habilidades" class="tab-content">
-      <h2>Minhas Habilidades</h2>
+      <div class="section-header">
+        <h2>HABILIDADES</h2>
+        <p>Tecnologias e ferramentas que domino para criar soluções digitais modernas e eficientes.</p>
+      </div>
+
       <div class="skills-grid">
-        <div class="skill-item skill-frontend">
-          <h3>Frontend</h3>
-          <p>HTML5, CSS3, JavaScript, React, Vue.js, Tailwind CSS</p>
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Design de interfaces modernas e intuitivas. Figma, Adobe XD, prototipagem e design systems.</p>
         </div>
-        <div class="skill-item skill-backend">
-          <h3>Backend</h3>
-          <p>Node.js, Python, PHP, Express.js, APIs RESTful</p>
+
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Frontend Development</h3>
+          <p>HTML5, CSS3, JavaScript ES6+, React, Vue.js, Tailwind CSS e animações avançadas.</p>
         </div>
-        <div class="skill-item skill-database">
-          <h3>Banco de Dados</h3>
-          <p>MySQL, PostgreSQL, MongoDB, Firebase</p>
+
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend Development</h3>
+          <p>Node.js, Express, APIs RESTful, bancos de dados e arquiteturas escaláveis.</p>
         </div>
-        <div class="skill-item skill-mobile">
-          <h3>Mobile</h3>
-          <p>React Native, Flutter, PWA, Responsive Design</p>
+
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Desenvolvimento mobile-first, PWAs e interfaces que funcionam perfeitamente em qualquer dispositivo.</p>
         </div>
       </div>
     </div>
 
-    <!-- Conteúdo: Contato -->
+    <!-- Contato Section -->
     <div id="contato" class="tab-content">
-      <h2>Entre em Contato</h2>
-      <p style="text-align: center; margin-bottom: 40px;">Vamos conversar sobre seu próximo projeto! Estou sempre aberto a novas oportunidades e colaborações.</p>
+      <div class="section-header">
+        <h2>CONTATO</h2>
+        <p>Vamos trabalhar juntos no seu próximo projeto. Entre em contato e vamos criar algo incrível.</p>
+      </div>
+
       <div class="contact-grid">
-        <div class="contact-item contact-email" onclick="window.location.href='mailto:seu@email.com'">
+        <div class="contact-card" onclick="window.location.href='mailto:seu@email.com'">
+          <div class="contact-icon">✉️</div>
           <h3>Email</h3>
           <p>seu@email.com</p>
         </div>
-        <div class="contact-item contact-github" onclick="window.open('https://github.com/seuusuario', '_blank')">
+
+        <div class="contact-card" onclick="window.open('https://github.com/seuusuario', '_blank')">
+          <div class="contact-icon">🔧</div>
           <h3>GitHub</h3>
-          <p>@seuusuario</p>
+          <p>github.com/seuusuario</p>
         </div>
-        <div class="contact-item contact-linkedin" onclick="window.open('https://linkedin.com/in/seuperfil', '_blank')">
+
+        <div class="contact-card" onclick="window.open('https://linkedin.com/in/seuperfil', '_blank')">
+          <div class="contact-icon">💼</div>
           <h3>LinkedIn</h3>
-          <p>/in/seuperfil</p>
+          <p>linkedin.com/in/seuperfil</p>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    // Função para trocar abas
     function openTab(tabName) {
-      // Remover classe active de todas as abas e botões
+      // Remove active class from all tabs and buttons
       document.querySelectorAll('.tab-content').forEach(tab => {
         tab.classList.remove('active');
       });
@@ -498,86 +639,42 @@
         btn.classList.remove('active');
       });
 
-      // Adicionar classe active na aba e botão selecionados
+      // Add active class to selected tab and button
       document.getElementById(tabName).classList.add('active');
-      event.target.classList.add('active');
-    }
-
-    // Criar partículas animadas
-    function createParticles() {
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = 50;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        
-        // Posição aleatória
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        
-        // Delay aleatório para animação
-        particle.style.animationDelay = Math.random() * 6 + 's';
-        particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
-        
-        particlesContainer.appendChild(particle);
+      
+      // Find and activate the correct button
+      const buttons = document.querySelectorAll('.tab-btn');
+      const tabNames = ['sobre', 'projetos', 'habilidades', 'contato'];
+      const tabIndex = tabNames.indexOf(tabName);
+      if (tabIndex !== -1 && buttons[tabIndex]) {
+        buttons[tabIndex].classList.add('active');
       }
     }
 
-    // Efeito de scroll na navbar
+    // Smooth scroll effect for navbar
     window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
+      const nav = document.querySelector('nav');
       if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+        nav.style.background = 'rgba(10, 10, 10, 0.98)';
       } else {
-        navbar.classList.remove('scrolled');
+        nav.style.background = 'rgba(10, 10, 10, 0.95)';
       }
     });
 
-    // Inicializar partículas quando a página carregar
-    window.addEventListener('load', () => {
-      createParticles();
-    });
-
-    // Animação suave ao clicar nos links da navbar
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        // Adicionar efeito de ripple
-        const ripple = document.createElement('span');
-        ripple.style.cssText = `
-          position: absolute;
-          border-radius: 50%;
-          background: rgba(255,255,255,0.3);
-          animation: ripple 0.6s linear;
-          transform: scale(0);
-          pointer-events: none;
-        `;
+    // Add hover effects to project cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.project-card, .skill-card, .contact-card');
+      
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-8px)';
+        });
         
-        const rect = link.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
-        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
-        
-        link.appendChild(ripple);
-        
-        setTimeout(() => {
-          ripple.remove();
-        }, 600);
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
       });
     });
-
-    // Adicionar animação de ripple ao CSS
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes ripple {
-        to {
-          transform: scale(2);
-          opacity: 0;
-        }
-      }
-    `;
-    document.head.appendChild(style);
   </script>
 </body>
 </html>
