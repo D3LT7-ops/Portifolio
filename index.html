@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    /* Navbar */
+    nav {
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Conteúdo */
+    .tab {
+      display: none;
+      padding: 40px;
+      animation: fade 0.5s;
+    }
+    .tab.active {
+      display: block;
+    }
+
+    /* Botões das abas */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      background: #ddd;
+    }
+    .tab-buttons button {
+      padding: 15px 25px;
+      border: none;
+      background: #ccc;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .tab-buttons button.active {
+      background: #ff9800;
+      color: white;
+    }
+    .tab-buttons button:hover {
+      background: #bbb;
+    }
+
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Meu Portfólio</div>
+    <ul>
+      <li><a href="https://site1.com" target="_blank">Site 1</a></li>
+      <li><a href="https://site2.com" target="_blank">Site 2</a></li>
+      <li><a href="https://site3.com" target="_blank">Site 3</a></li>
+      <li><a href="https://site4.com" target="_blank">Site 4</a></li>
+    </ul>
+  </nav>
+
+  <!-- Botões para trocar de aba -->
+  <div class="tab-buttons">
+    <button onclick="openTab('sobre')" class="active">Sobre Mim</button>
+    <button onclick="openTab('projetos')">Projetos</button>
+    <button onclick="openTab('habilidades')">Habilidades</button>
+    <button onclick="openTab('contato')">Contato</button>
+  </div>
+
+  <!-- Conteúdo das abas -->
+  <div id="sobre" class="tab active">
+    <h2>Sobre Mim</h2>
+    <p>Aqui vai um resumo sobre você.</p>
+  </div>
+
+  <div id="projetos" class="tab">
+    <h2>Projetos</h2>
+    <p>Aqui você pode colocar seus projetos.</p>
+  </div>
+
+  <div id="habilidades" class="tab">
+    <h2>Habilidades</h2>
+    <p>Liste suas habilidades técnicas e pessoais.</p>
+  </div>
+
+  <div id="contato" class="tab">
+    <h2>Contato</h2>
+    <p>Email: voce@email.com</p>
+  </div>
+
+  <script>
+    function openTab(tabName) {
+      let tabs = document.querySelectorAll(".tab");
+      let buttons = document.querySelectorAll(".tab-buttons button");
+
+      tabs.forEach(tab => tab.classList.remove("active"));
+      buttons.forEach(btn => btn.classList.remove("active"));
+
+      document.getElementById(tabName).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
