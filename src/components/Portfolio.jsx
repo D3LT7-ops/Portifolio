@@ -233,7 +233,7 @@ export default function Portfolio() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href="mailto:contato@helberth.dev"
+                href="helberthrenan@icloud.com"
                 className={`flex items-center gap-2 px-8 py-4 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
               >
                 <Mail size={20} />
