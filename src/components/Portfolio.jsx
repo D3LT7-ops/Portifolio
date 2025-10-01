@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users } from 'lucide-react';
+import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle } from 'lucide-react';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -118,6 +118,14 @@ export default function Portfolio() {
                 <Linkedin size={24} />
               </a>
               <a 
+                href="https://w.app/delt7dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+              >
+                <MessageCircle size={24} />
+              </a>
+              <a 
                 href="#contato"
                 className={`px-6 py-3 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
               >
@@ -233,7 +241,7 @@ export default function Portfolio() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href="mailto:helberthrenan@icloud.com" 
+                href="mailto:helberthrenan@icloud.com"  
                 className={`flex items-center gap-2 px-8 py-4 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
               >
                 <Mail size={20} />
@@ -255,6 +263,14 @@ export default function Portfolio() {
                   className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
                 >
                   <Linkedin size={20} />
+                </a>
+                <a 
+                  href="https://w.app/delt7dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                >
+                  <MessageCircle size={20} />
                 </a>
               </div>
             </div>
