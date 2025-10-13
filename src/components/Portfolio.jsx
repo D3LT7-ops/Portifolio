@@ -265,7 +265,7 @@ export default function Portfolio() {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="https://w.app/delt7dev"
+                  href="https://wa.link/f6hytj"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
