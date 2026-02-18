@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle, Database, BarChart2, Award, Pen, Globe, GraduationCap, Sparkles, Wrench } from 'lucide-react';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -23,7 +23,11 @@ export default function Portfolio() {
     'Git & GitHub',
     'Scrum Master',
     'Backend & Frontend',
-    'JavaScript ES6+'
+    'JavaScript ES6+',
+    'Oracle & PL/SQL',
+    'Power BI',
+    'Inkscape & Design Vetorial',
+    'Inglês',
   ];
 
   const projects = [
@@ -43,6 +47,68 @@ export default function Portfolio() {
     }
   ];
 
+  const experiences = [
+    {
+      role: 'Marketing',
+      company: 'SIF Soft Jr',
+      period: '2025 – Presente',
+      description: 'Atuação na área de marketing de empresa júnior, com foco em estratégias de comunicação, posicionamento de marca e apoio às iniciativas de crescimento e visibilidade da organização.',
+      techs: ['Marketing', 'Design Vetorial', 'Inkscape', 'Comunicação']
+    },
+    {
+      role: 'Desenvolvedor Full Stack Autônomo',
+      company: 'Freelancer',
+      period: '2023 – Presente',
+      description: 'Desenvolvimento de soluções web completas, design de interfaces e facilitação ágil para diversos clientes. Atendimento desde a concepção até a entrega do produto final.',
+      techs: ['React', 'Node.js', 'MongoDB', 'Figma', 'UX/UI']
+    }
+  ];
+
+  const courses = [
+    {
+      name: 'Oracle Database & PL/SQL',
+      institution: 'IFRS — Instituto Federal do Rio Grande do Sul',
+      year: '2023',
+      icon: Database,
+      description: 'Fundamentos de banco de dados relacional, modelagem, consultas avançadas e programação com PL/SQL.'
+    },
+    {
+      name: 'Power BI — Business Intelligence',
+      institution: 'IFRS — Instituto Federal do Rio Grande do Sul',
+      year: '2023',
+      icon: BarChart2,
+      description: 'Criação de dashboards, relatórios interativos, transformação de dados e visualização gerencial com Power BI.'
+    },
+    {
+      name: 'Scrum Master',
+      institution: 'SCRUMstudy',
+      year: '2023',
+      icon: Award,
+      description: 'Metodologia ágil Scrum, facilitação de cerimônias, gestão de backlog e liderança de equipes de desenvolvimento.'
+    },
+    {
+      name: 'Design Vetorial com Inkscape',
+      institution: 'IFRS — Instituto Federal do Rio Grande do Sul',
+      year: '2023',
+      icon: Pen,
+      description: 'Criação e edição de ilustrações vetoriais, identidade visual, logotipos e materiais gráficos profissionais.'
+    },
+    {
+      name: 'Inglês',
+      institution: 'IFRS — Instituto Federal do Rio Grande do Sul',
+      year: 'Atual',
+      icon: Globe,
+      description: 'Estudo contínuo do idioma com foco em leitura técnica, documentações e comunicação profissional.'
+    },
+    {
+      name: 'Sistemas de Informação',
+      institution: 'IFNMG — Instituto Federal do Norte de Minas Gerais',
+      year: '2023 – Presente',
+      icon: GraduationCap,
+      description: 'Bacharelado com foco em desenvolvimento de software, banco de dados, engenharia de sistemas e gestão de TI.'
+    }
+  ];
+
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
       {/* Header */}
@@ -54,10 +120,12 @@ export default function Portfolio() {
           </div>
           <div className="flex items-center gap-6">
             <a href="#sobre" className="hover:text-green-400 transition-colors hidden md:block">Sobre</a>
+            <a href="#experiencia" className="hover:text-green-400 transition-colors hidden md:block">Experiência</a>
+            <a href="#cursos" className="hover:text-green-400 transition-colors hidden md:block">Cursos</a>
             <a href="#projetos" className="hover:text-green-400 transition-colors hidden md:block">Projetos</a>
             <a href="#habilidades" className="hover:text-green-400 transition-colors hidden md:block">Skills</a>
             <a href="#contato" className="hover:text-green-400 transition-colors hidden md:block">Contato</a>
-            <button 
+            <button
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-gray-800' : 'bg-gray-200 hover:bg-gray-300'}`}
             >
@@ -77,7 +145,7 @@ export default function Portfolio() {
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Olá, eu sou<br/>
+              Olá, eu sou<br />
               <span className={`${darkMode ? 'text-green-400' : 'text-green-600'}`}>Helberth Renan</span>
             </h1>
             <div className="flex flex-wrap gap-3 text-lg md:text-xl opacity-80">
@@ -97,19 +165,19 @@ export default function Portfolio() {
               </span>
             </div>
             <p className="text-xl md:text-2xl max-w-3xl leading-relaxed opacity-90">
-              Transformo ideias em soluções digitais através de código limpo, design intuitivo e metodologias ágeis. 
+              Transformo ideias em soluções digitais através de código limpo, design intuitivo e metodologias ágeis.
               Baseado em Salinas, MG — criando experiências que importam.
             </p>
             <div className="flex gap-4 pt-4">
-              <a 
-                href="https://github.com/D3LT7-ops" 
+              <a
+                href="https://github.com/D3LT7-ops"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
               >
                 <Github size={24} />
               </a>
-              <a 
+              <a
                 href="https://www.linkedin.com/in/helberth-renan-gomes-de-sousa-hrgs-657855354"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -117,7 +185,7 @@ export default function Portfolio() {
               >
                 <Linkedin size={24} />
               </a>
-              <a 
+              <a
                 href="https://wa.link/bqgm5g"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -125,7 +193,7 @@ export default function Portfolio() {
               >
                 <MessageCircle size={24} />
               </a>
-              <a 
+              <a
                 href="#contato"
                 className={`px-6 py-3 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
               >
@@ -159,12 +227,82 @@ export default function Portfolio() {
                   <p className="text-sm opacity-70">IFNMG - Instituto Federal do Norte de Minas Gerais</p>
                 </div>
                 <div className="pt-4 border-t border-gray-800">
+                  <p className="font-semibold">Marketing na SIF Soft Jr</p>
+                  <p className="text-sm opacity-70">2025 – Presente</p>
+                  <p className="text-sm mt-2 opacity-80">Atuação em empresa júnior com foco em marketing, comunicação e posicionamento de marca.</p>
+                </div>
+                <div className="pt-4 border-t border-gray-800">
                   <p className="font-semibold">Desenvolvedor Full Stack Autônomo</p>
                   <p className="text-sm opacity-70">1 ano e 6 meses • 2023 - Presente</p>
                   <p className="text-sm mt-2 opacity-80">Desenvolvimento de soluções web completas, design de interfaces e facilitação ágil para diversos clientes.</p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experiencia" className="py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Minha <span className={darkMode ? 'text-green-400' : 'text-green-600'}>Experiência</span>
+          </h2>
+          <div className="relative">
+            <div className={`absolute left-6 top-0 bottom-0 w-px ${darkMode ? 'bg-gray-800' : 'bg-gray-200'}`} />
+            <div className="space-y-10">
+              {experiences.map((exp, index) => (
+                <div key={index} className="flex gap-8 pl-16 relative">
+                  <div className="absolute left-[18px] top-2 w-4 h-4 rounded-full bg-green-500 flex-shrink-0" />
+                  <div className={`flex-1 p-6 rounded-2xl transition-all hover:scale-[1.01] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}>
+                    <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                      <div>
+                        <h3 className="text-xl font-bold">{exp.role}</h3>
+                        <p className={`font-medium ${darkMode ? 'text-green-400' : 'text-green-600'}`}>{exp.company}</p>
+                      </div>
+                      <span className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'}`}>
+                        {exp.period}
+                      </span>
+                    </div>
+                    <p className="opacity-80 mt-3 leading-relaxed">{exp.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {exp.techs.map((tech, i) => (
+                        <span key={i} className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-100 text-green-700'}`}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section id="cursos" className="py-20 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">
+            Cursos & <span className={darkMode ? 'text-green-400' : 'text-green-600'}>Certificações</span>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courses.map((course, index) => (
+              <div
+                key={index}
+                className={`p-6 rounded-2xl transition-all hover:scale-[1.03] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}
+              >
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${darkMode ? 'bg-green-950 text-green-400' : 'bg-green-50 text-green-600'}`}>
+                  <course.icon size={20} />
+                </div>
+                <h3 className="text-lg font-bold mb-1">{course.name}</h3>
+                <p className={`text-sm font-medium mb-3 ${darkMode ? 'text-green-400' : 'text-green-600'}`}>{course.institution}</p>
+                <p className="text-sm opacity-75 leading-relaxed mb-4">{course.description}</p>
+                <span className={`text-xs px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'}`}>
+                  {course.year}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -177,7 +315,7 @@ export default function Portfolio() {
           </h2>
           <div className="grid gap-8">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className={`group p-8 rounded-2xl transition-all hover:scale-[1.02] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}
               >
@@ -190,7 +328,7 @@ export default function Portfolio() {
                 <p className="text-lg mb-4 opacity-90">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, i) => (
-                    <span 
+                    <span
                       key={i}
                       className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-100 text-green-700'}`}
                     >
@@ -198,11 +336,9 @@ export default function Portfolio() {
                     </span>
                   ))}
                 </div>
-                <p className="text-sm opacity-70 italic">
-                  ✨ {project.highlight}
-                </p>
+                <p className="text-sm opacity-70 italic">{project.highlight}</p>
                 {project.status && (
-                  <p className="text-sm mt-2 text-green-400">🔧 {project.status}</p>
+                  <p className="text-sm mt-2 text-green-400">{project.status}</p>
                 )}
               </div>
             ))}
@@ -218,7 +354,7 @@ export default function Portfolio() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {skills.map((skill, index) => (
-              <div 
+              <div
                 key={index}
                 className={`p-4 rounded-xl text-center transition-all hover:scale-105 ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}
               >
@@ -240,15 +376,15 @@ export default function Portfolio() {
               Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte da sua visão.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="mailto:helberthrenan@icloud.com"  
+              <a
+                href="mailto:helberthrenan@icloud.com"
                 className={`flex items-center gap-2 px-8 py-4 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
               >
                 <Mail size={20} />
                 Enviar email
               </a>
               <div className="flex gap-4">
-                <a 
+                <a
                   href="https://github.com/D3LT7-ops"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -256,7 +392,7 @@ export default function Portfolio() {
                 >
                   <Github size={20} />
                 </a>
-                <a 
+                <a
                   href="https://www.linkedin.com/in/helberth-renan-gomes-de-sousa-hrgs-657855354"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -264,7 +400,7 @@ export default function Portfolio() {
                 >
                   <Linkedin size={20} />
                 </a>
-                <a 
+                <a
                   href="https://wa.link/bqgm5g"
                   target="_blank"
                   rel="noopener noreferrer"
