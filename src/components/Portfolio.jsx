@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle, Database, BarChart2, Award, Pen, Globe, GraduationCap } from 'lucide-react';
-import logo from './logo.png';
+import logo from './images/logo.png';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -423,5 +423,4 @@ export default function Portfolio() {
       </footer>
     </div>
   );
-  
 }
