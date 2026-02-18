@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.nav-logo {
-  height: 48px;
-  width: auto;
-  object-fit: contain;
-}
 * {
   margin: 0;
   padding: 0;
@@ -24,4 +18,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
 }
