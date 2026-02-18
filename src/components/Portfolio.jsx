@@ -116,7 +116,7 @@ export default function Portfolio() {
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-blue-500/5' : 'bg-white/80 backdrop-blur-lg shadow-lg') : ''}`}>
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <img src={logo} alt="RC DEV" className="h-10 w-auto" />
+            <img src={logo} alt="RC DEV" className="nav-logo" />
           </div>
           <div className="flex items-center gap-6">
             <a href="#sobre" className="hover:text-blue-400 transition-colors hidden md:block">Sobre</a>
@@ -423,4 +423,5 @@ export default function Portfolio() {
       </footer>
     </div>
   );
+  
 }
