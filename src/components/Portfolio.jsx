@@ -112,9 +112,9 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
+    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black text-gray-100' : 'text-gray-900'}`} style={!darkMode ? {backgroundColor: '#F2F2F2'} : {}}>
       {/* Header */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-blue-500/5' : 'bg-white/80 backdrop-blur-lg shadow-lg') : ''}`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-blue-500/5' : 'backdrop-blur-lg shadow-lg') : ''}`} style={scrolled && !darkMode ? {backgroundColor: 'rgba(242, 242, 242, 0.92)'} : {}}>
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <img src={darkMode ? logo : logoLight} alt="RC DEV" className="nav-logo" />
