@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle, Database, BarChart2, Award, Pen, Globe, GraduationCap } from 'lucide-react';
+import logo from './logo.png';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -114,9 +115,8 @@ export default function Portfolio() {
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-blue-500/5' : 'bg-white/80 backdrop-blur-lg shadow-lg') : ''}`}>
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold">
-            <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>RC DEV</span>
-            <span className="text-xs ml-2 opacity-70"></span>
+          <div className="flex items-center">
+            <img src={logo} alt="RC DEV" className="h-10 w-auto" />
           </div>
           <div className="flex items-center gap-6">
             <a href="#sobre" className="hover:text-blue-400 transition-colors hidden md:block">Sobre</a>
