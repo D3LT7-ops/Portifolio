@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle, Database, BarChart2, Award, Pen, Globe, GraduationCap, Sparkles, Wrench } from 'lucide-react';
+import { Github, Linkedin, Mail, Sun, Moon, ExternalLink, Code2, Layers, Users, MessageCircle, Database, BarChart2, Award, Pen, Globe, GraduationCap } from 'lucide-react';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(true);
@@ -112,19 +112,19 @@ export default function Portfolio() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black text-gray-100' : 'bg-gray-50 text-gray-900'}`}>
       {/* Header */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-green-500/5' : 'bg-white/80 backdrop-blur-lg shadow-lg') : ''}`}>
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-black/80 backdrop-blur-lg shadow-lg shadow-blue-500/5' : 'bg-white/80 backdrop-blur-lg shadow-lg') : ''}`}>
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-2xl font-bold">
-            <span className={darkMode ? 'text-green-400' : 'text-green-600'}>HRGS</span>
-            <span className="text-xs ml-2 opacity-70">v2.0</span>
+            <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>RC DEV</span>
+            <span className="text-xs ml-2 opacity-70"></span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#sobre" className="hover:text-green-400 transition-colors hidden md:block">Sobre</a>
-            <a href="#experiencia" className="hover:text-green-400 transition-colors hidden md:block">Experiência</a>
-            <a href="#cursos" className="hover:text-green-400 transition-colors hidden md:block">Cursos</a>
-            <a href="#projetos" className="hover:text-green-400 transition-colors hidden md:block">Projetos</a>
-            <a href="#habilidades" className="hover:text-green-400 transition-colors hidden md:block">Skills</a>
-            <a href="#contato" className="hover:text-green-400 transition-colors hidden md:block">Contato</a>
+            <a href="#sobre" className="hover:text-blue-400 transition-colors hidden md:block">Sobre</a>
+            <a href="#experiencia" className="hover:text-blue-400 transition-colors hidden md:block">Experiência</a>
+            <a href="#cursos" className="hover:text-blue-400 transition-colors hidden md:block">Cursos</a>
+            <a href="#projetos" className="hover:text-blue-400 transition-colors hidden md:block">Projetos</a>
+            <a href="#habilidades" className="hover:text-blue-400 transition-colors hidden md:block">Skills</a>
+            <a href="#contato" className="hover:text-blue-400 transition-colors hidden md:block">Contato</a>
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-gray-800' : 'bg-gray-200 hover:bg-gray-300'}`}
@@ -140,27 +140,27 @@ export default function Portfolio() {
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-6">
             <div className="inline-block">
-              <span className={`text-sm font-mono px-4 py-2 rounded-full ${darkMode ? 'bg-green-950 text-green-400 border border-green-800' : 'bg-green-50 text-green-700 border border-green-200'}`}>
+              <span className={`text-sm font-mono px-4 py-2 rounded-full ${darkMode ? 'bg-blue-950 text-blue-400 border border-blue-800' : 'bg-blue-50 text-blue-600 border border-blue-200'}`}>
                 Disponível para novos projetos
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Olá, eu sou<br />
-              <span className={`${darkMode ? 'text-green-400' : 'text-green-600'}`}>Helberth Renan</span>
+              <span className={`${darkMode ? 'text-blue-400' : 'text-blue-500'}`}>Helberth Renan</span>
             </h1>
             <div className="flex flex-wrap gap-3 text-lg md:text-xl opacity-80">
               <span className="flex items-center gap-2">
-                <Code2 size={20} className="text-green-400" />
+                <Code2 size={20} className="text-blue-400" />
                 Full Stack Developer
               </span>
               <span className={darkMode ? 'text-gray-600' : 'text-gray-400'}>|</span>
               <span className="flex items-center gap-2">
-                <Layers size={20} className="text-green-400" />
+                <Layers size={20} className="text-blue-400" />
                 UX/UI Designer
               </span>
               <span className={darkMode ? 'text-gray-600' : 'text-gray-400'}>|</span>
               <span className="flex items-center gap-2">
-                <Users size={20} className="text-green-400" />
+                <Users size={20} className="text-blue-400" />
                 Scrum Master
               </span>
             </div>
@@ -173,7 +173,7 @@ export default function Portfolio() {
                 href="https://github.com/D3LT7-ops"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-blue-950 hover:text-blue-400' : 'bg-gray-200 hover:bg-blue-100 hover:text-blue-500'}`}
               >
                 <Github size={24} />
               </a>
@@ -181,7 +181,7 @@ export default function Portfolio() {
                 href="https://www.linkedin.com/in/helberth-renan-gomes-de-sousa-hrgs-657855354"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-blue-950 hover:text-blue-400' : 'bg-gray-200 hover:bg-blue-100 hover:text-blue-500'}`}
               >
                 <Linkedin size={24} />
               </a>
@@ -189,13 +189,13 @@ export default function Portfolio() {
                 href="https://wa.link/bqgm5g"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                className={`p-3 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-blue-950 hover:text-blue-400' : 'bg-gray-200 hover:bg-blue-100 hover:text-blue-500'}`}
               >
                 <MessageCircle size={24} />
               </a>
               <a
                 href="#contato"
-                className={`px-6 py-3 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
+                className={`px-6 py-3 rounded-lg font-medium transition-all ${darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
               >
                 Entre em contato
               </a>
@@ -208,7 +208,7 @@ export default function Portfolio() {
       <section id="sobre" className="py-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Sobre <span className={darkMode ? 'text-green-400' : 'text-green-600'}>mim</span>
+            Sobre <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>mim</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -220,7 +220,7 @@ export default function Portfolio() {
               </p>
             </div>
             <div className={`p-8 rounded-2xl ${darkMode ? 'bg-gray-900 border border-gray-800' : 'bg-white border border-gray-200'}`}>
-              <h3 className="text-xl font-bold mb-4 text-green-400">Formação & Experiência</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-400">Formação & Experiência</h3>
               <div className="space-y-4">
                 <div>
                   <p className="font-semibold">Bacharel em Sistemas de Informação</p>
@@ -246,19 +246,19 @@ export default function Portfolio() {
       <section id="experiencia" className="py-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Minha <span className={darkMode ? 'text-green-400' : 'text-green-600'}>Experiência</span>
+            Minha <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>Experiência</span>
           </h2>
           <div className="relative">
             <div className={`absolute left-6 top-0 bottom-0 w-px ${darkMode ? 'bg-gray-800' : 'bg-gray-200'}`} />
             <div className="space-y-10">
               {experiences.map((exp, index) => (
                 <div key={index} className="flex gap-8 pl-16 relative">
-                  <div className="absolute left-[18px] top-2 w-4 h-4 rounded-full bg-green-500 flex-shrink-0" />
-                  <div className={`flex-1 p-6 rounded-2xl transition-all hover:scale-[1.01] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}>
+                  <div className="absolute left-[18px] top-2 w-4 h-4 rounded-full bg-blue-500 flex-shrink-0" />
+                  <div className={`flex-1 p-6 rounded-2xl transition-all hover:scale-[1.01] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-blue-800' : 'bg-white border border-gray-200 hover:border-blue-300'}`}>
                     <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                       <div>
                         <h3 className="text-xl font-bold">{exp.role}</h3>
-                        <p className={`font-medium ${darkMode ? 'text-green-400' : 'text-green-600'}`}>{exp.company}</p>
+                        <p className={`font-medium ${darkMode ? 'text-blue-400' : 'text-blue-500'}`}>{exp.company}</p>
                       </div>
                       <span className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'}`}>
                         {exp.period}
@@ -267,7 +267,7 @@ export default function Portfolio() {
                     <p className="opacity-80 mt-3 leading-relaxed">{exp.description}</p>
                     <div className="flex flex-wrap gap-2 mt-4">
                       {exp.techs.map((tech, i) => (
-                        <span key={i} className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-100 text-green-700'}`}>
+                        <span key={i} className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-blue-400' : 'bg-gray-100 text-blue-600'}`}>
                           {tech}
                         </span>
                       ))}
@@ -284,19 +284,19 @@ export default function Portfolio() {
       <section id="cursos" className="py-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Cursos & <span className={darkMode ? 'text-green-400' : 'text-green-600'}>Certificações</span>
+            Cursos & <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>Certificações</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-2xl transition-all hover:scale-[1.03] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}
+                className={`p-6 rounded-2xl transition-all hover:scale-[1.03] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-blue-800' : 'bg-white border border-gray-200 hover:border-blue-300'}`}
               >
-                <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${darkMode ? 'bg-green-950 text-green-400' : 'bg-green-50 text-green-600'}`}>
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-4 ${darkMode ? 'bg-blue-950 text-blue-400' : 'bg-blue-50 text-blue-500'}`}>
                   <course.icon size={20} />
                 </div>
                 <h3 className="text-lg font-bold mb-1">{course.name}</h3>
-                <p className={`text-sm font-medium mb-3 ${darkMode ? 'text-green-400' : 'text-green-600'}`}>{course.institution}</p>
+                <p className={`text-sm font-medium mb-3 ${darkMode ? 'text-blue-400' : 'text-blue-500'}`}>{course.institution}</p>
                 <p className="text-sm opacity-75 leading-relaxed mb-4">{course.description}</p>
                 <span className={`text-xs px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'}`}>
                   {course.year}
@@ -311,18 +311,18 @@ export default function Portfolio() {
       <section id="projetos" className="py-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Projetos em <span className={darkMode ? 'text-green-400' : 'text-green-600'}>destaque</span>
+            Projetos em <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>destaque</span>
           </h2>
           <div className="grid gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`group p-8 rounded-2xl transition-all hover:scale-[1.02] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}
+                className={`group p-8 rounded-2xl transition-all hover:scale-[1.02] ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-blue-800' : 'bg-white border border-gray-200 hover:border-blue-300'}`}
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold">{project.title}</h3>
                   {project.link && (
-                    <ExternalLink className="opacity-50 group-hover:opacity-100 group-hover:text-green-400 transition-all" size={20} />
+                    <ExternalLink className="opacity-50 group-hover:opacity-100 group-hover:text-blue-400 transition-all" size={20} />
                   )}
                 </div>
                 <p className="text-lg mb-4 opacity-90">{project.description}</p>
@@ -330,7 +330,7 @@ export default function Portfolio() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-100 text-green-700'}`}
+                      className={`text-sm px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800 text-blue-400' : 'bg-gray-100 text-blue-600'}`}
                     >
                       {tech}
                     </span>
@@ -338,7 +338,7 @@ export default function Portfolio() {
                 </div>
                 <p className="text-sm opacity-70 italic">{project.highlight}</p>
                 {project.status && (
-                  <p className="text-sm mt-2 text-green-400">{project.status}</p>
+                  <p className="text-sm mt-2 text-blue-400">{project.status}</p>
                 )}
               </div>
             ))}
@@ -350,13 +350,13 @@ export default function Portfolio() {
       <section id="habilidades" className="py-20 px-6">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Habilidades <span className={darkMode ? 'text-green-400' : 'text-green-600'}>técnicas</span>
+            Habilidades <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>técnicas</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className={`p-4 rounded-xl text-center transition-all hover:scale-105 ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-green-800' : 'bg-white border border-gray-200 hover:border-green-300'}`}
+                className={`p-4 rounded-xl text-center transition-all hover:scale-105 ${darkMode ? 'bg-gray-900 border border-gray-800 hover:border-blue-800' : 'bg-white border border-gray-200 hover:border-blue-300'}`}
               >
                 <p className="font-medium">{skill}</p>
               </div>
@@ -370,7 +370,7 @@ export default function Portfolio() {
         <div className="container mx-auto max-w-5xl">
           <div className={`p-12 rounded-3xl text-center ${darkMode ? 'bg-gradient-to-br from-gray-900 to-black border border-gray-800' : 'bg-gradient-to-br from-gray-100 to-white border border-gray-200'}`}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Vamos trabalhar <span className={darkMode ? 'text-green-400' : 'text-green-600'}>juntos</span>?
+              Vamos trabalhar <span className={darkMode ? 'text-blue-400' : 'text-blue-500'}>juntos</span>?
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte da sua visão.
@@ -378,7 +378,7 @@ export default function Portfolio() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="mailto:helberthrenan@icloud.com"
-                className={`flex items-center gap-2 px-8 py-4 rounded-lg font-medium transition-all ${darkMode ? 'bg-green-600 hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'}`}
+                className={`flex items-center gap-2 px-8 py-4 rounded-lg font-medium transition-all ${darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
               >
                 <Mail size={20} />
                 Enviar email
@@ -388,7 +388,7 @@ export default function Portfolio() {
                   href="https://github.com/D3LT7-ops"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-blue-950 hover:text-blue-400' : 'bg-gray-200 hover:bg-blue-100 hover:text-blue-500'}`}
                 >
                   <Github size={20} />
                 </a>
@@ -396,7 +396,7 @@ export default function Portfolio() {
                   href="https://www.linkedin.com/in/helberth-renan-gomes-de-sousa-hrgs-657855354"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-blue-950 hover:text-blue-400' : 'bg-gray-200 hover:bg-blue-100 hover:text-blue-500'}`}
                 >
                   <Linkedin size={20} />
                 </a>
@@ -404,7 +404,7 @@ export default function Portfolio() {
                   href="https://wa.link/bqgm5g"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-green-950 hover:text-green-400' : 'bg-gray-200 hover:bg-green-100 hover:text-green-600'}`}
+                  className={`p-4 rounded-lg transition-all ${darkMode ? 'bg-gray-900 hover:bg-blue-950 hover:text-blue-400' : 'bg-gray-200 hover:bg-blue-100 hover:text-blue-500'}`}
                 >
                   <MessageCircle size={20} />
                 </a>
