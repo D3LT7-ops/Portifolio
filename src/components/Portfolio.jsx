@@ -46,6 +46,13 @@ export default function Portfolio() {
       tech: ['HTML5', 'CSS3', 'JavaScript', 'Figma'],
       link: 'restaurantexemplo.com',
       highlight: 'Design otimizado para conversão mobile-first'
+    },
+    {
+      title: 'Fincontrol - Sistema de Gestão Financeira Empresarial',
+      description: 'Aplicativo web para controle de finanças corporativas, com registro de receitas, despesas e análises detalhadas.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      link: 'https://finvault-pi.vercel.app/',
+      highlight: 'Dashboard financeiro com relatórios em tempo real'
     }
   ];
 
@@ -323,7 +330,9 @@ export default function Portfolio() {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold">{project.title}</h3>
                   {project.link && (
-                    <ExternalLink className="opacity-50 group-hover:opacity-100 group-hover:text-blue-400 transition-all" size={20} />
+                    <a href={project.link.startsWith('http') ? project.link : `https://${project.link}`} target="_blank" rel="noopener noreferrer" className="opacity-50 group-hover:opacity-100 group-hover:text-blue-400 transition-all">
+                      <ExternalLink size={20} />
+                    </a>
                   )}
                 </div>
                 <p className="text-lg mb-4 opacity-90">{project.description}</p>
