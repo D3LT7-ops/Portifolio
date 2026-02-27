@@ -44,7 +44,7 @@ export default function Portfolio() {
       title: 'Landing Page para Restaurante',
       description: 'Site responsivo e moderno com cardápio digital interativo e sistema de reservas online integrado.',
       tech: ['HTML5', 'CSS3', 'JavaScript', 'Figma'],
-      link: 'restaurantexemplo.com',
+      link: 'https://landing-page-z8hi.vercel.app/',
       highlight: 'Design otimizado para conversão mobile-first'
     },
     {
