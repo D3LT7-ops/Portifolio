@@ -34,10 +34,10 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: 'Sistema de Gerenciamento de Vendas',
+      title: 'AutoReport- AI - Gerador de Relatórios Inteligente',
       description: 'Plataforma completa para controle de vendas, estoque e relatórios gerenciais voltada para pequenas empresas.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      status: 'Em desenvolvimento',
+      tech: ['Next.js 14 (App Router)', 'React 18', 'TailwindCSS', 'Supabase', 'TypeScript', 'Figma', 'Recharts' , 'jsPDF + jspdf-autotable' , 'SheetJS (xlsx)'],
+      link: 'https://auto-report-ai.vercel.app/dashboard' ,
       highlight: 'Dashboard interativo com visualização em tempo real'
     },
     {
