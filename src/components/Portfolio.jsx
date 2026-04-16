@@ -37,7 +37,7 @@ export default function Portfolio() {
       title: 'AutoReport- AI - Gerador de Relatórios Inteligente',
       description: 'Plataforma completa para controle de vendas, estoque e relatórios gerenciais voltada para pequenas empresas.',
       tech: ['Next.js 14 (App Router)', 'React 18', 'TailwindCSS', 'Supabase', 'TypeScript', 'Figma', 'Recharts' , 'jsPDF + jspdf-autotable' , 'SheetJS (xlsx)'],
-      link: 'https://auto-report-ai.vercel.app/dashboard' ,
+      link: 'https://auto-report-ai-main.vercel.app/' ,
       highlight: 'Dashboard interativo com visualização em tempo real'
     },
     {
@@ -48,11 +48,11 @@ export default function Portfolio() {
       highlight: 'Design otimizado para conversão mobile-first'
     },
     {
-      title: 'Fincontrol - Sistema de Gestão Financeira Empresarial',
-      description: 'Aplicativo web para controle de finanças corporativas, com registro de receitas, despesas e análises detalhadas.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      link: 'https://finvault-pi.vercel.app/',
-      highlight: 'Dashboard financeiro com relatórios em tempo real'
+      title: 'Tom Music - Escola de Música',
+      description: 'Plataforma web desenvolvida para uma escola de música, apresentando cursos, pacotes, professores, depoimentos de alunos e agendamento de aula experimental.',
+      tech: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+      link: 'https://trabalho-finalweb.vercel.app/',
+    highlight: 'Landing page institucional com apresentação de cursos, horários flexíveis e agendamento de aula grátis'
     }
   ];
 
