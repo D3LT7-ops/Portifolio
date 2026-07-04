@@ -117,9 +117,9 @@ export default function Portfolio() {
       description: 'Estudo contínuo do idioma com foco em leitura técnica, documentações e comunicação profissional.'
     },
     {
-      name: 'Sistemas de Informação',
+      name: 'Em Formação - Sistemas de Informação',
       institution: 'IFNMG — Instituto Federal do Norte de Minas Gerais',
-      year: '2023 – Presente',
+      year: '2024 – Presente',
       icon: GraduationCap,
       description: 'Bacharelado com foco em desenvolvimento de software, banco de dados, engenharia de sistemas e gestão de TI.'
     }
