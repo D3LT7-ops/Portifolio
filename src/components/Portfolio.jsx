@@ -231,14 +231,14 @@ export default function Portfolio() {
                 Sou desenvolvedor full stack com forte atuação em UX/UI e metodologias ágeis. Com experiência como autônomo desde 2023, tenho ajudado empresas e clientes a materializarem suas visões em produtos digitais funcionais e elegantes.
               </p>
               <p className="text-lg leading-relaxed opacity-90">
-                Formado em Sistemas de Informação pelo IFNMG, combino conhecimento técnico profundo com habilidades de design e gestão de projetos, sempre buscando entregar não apenas código, mas soluções completas.
+                Formando em Sistemas de Informação pelo IFNMG, combino conhecimento técnico profundo com habilidades de design e gestão de projetos, sempre buscando entregar não apenas código, mas soluções completas.
               </p>
             </div>
             <div className={`p-8 rounded-2xl ${darkMode ? 'bg-gray-900 border border-gray-800' : 'bg-white border border-gray-200'}`}>
               <h3 className="text-xl font-bold mb-4 text-blue-400">Formação & Experiência</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="font-semibold">Bacharel em Sistemas de Informação</p>
+                  <p className="font-semibold">Em Formacao - Bacharel em Sistemas de Informação</p>
                   <p className="text-sm opacity-70">IFNMG - Instituto Federal do Norte de Minas Gerais</p>
                 </div>
                 <div className="pt-4 border-t border-gray-800">
@@ -246,6 +246,15 @@ export default function Portfolio() {
                   <p className="text-sm opacity-70">2025 – Presente</p>
                   <p className="text-sm mt-2 opacity-80">Atuação em empresa júnior com foco em marketing, comunicação e posicionamento de marca.</p>
                 </div>
+                <div className="pt-4 border-t border-gray-800">
+                  <p className="font-semibold">Líder de Dados</p>
+                  <p className="text-sm opacity-70">6 meses • 2026 – Presente</p>
+                  <p className="text-sm mt-2 opacity-80">
+                    Responsável pela análise de indicadores, criação de dashboards e definição de estratégias de desenvolvimento das empresas juniores com base no Planejamento Estratégico da Rede Mineira.
+                </p>
+                </div>
+
+
                 <div className="pt-4 border-t border-gray-800">
                   <p className="font-semibold">Desenvolvedor Full Stack Autônomo</p>
                   <p className="text-sm opacity-70">1 ano e 6 meses • 2023 - Presente</p>
