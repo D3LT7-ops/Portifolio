@@ -65,6 +65,13 @@ export default function Portfolio() {
       techs: ['Marketing', 'Design Vetorial', 'Inkscape', 'Comunicação']
     },
     {
+      role: 'Líder de Dados',
+      company: 'Núcleo Norte de Empresas Juniores',
+      period: '2026 – Presente',
+      description: 'Responsável pela liderança da área de Dados do Núcleo Norte, estruturando indicadores estratégicos, desenvolvendo dashboards e analisando o desempenho das empresas juniores. Atuo no acompanhamento de métricas, geração de relatórios gerenciais e apoio à tomada de decisão baseada em dados. Também sou responsável por definir e acompanhar as melhores rotas de desenvolvimento das empresas por meio da análise do Planejamento Estratégico (PE) da Rede Mineira de Empresas Juniores, contribuindo para o crescimento e alcance das metas institucionais.',
+      techs: ['Power BI', 'Excel', 'Google Sheets', 'Análise de Dados', 'Dashboards', 'Indicadores (KPIs)', 'Visualização de Dados', 'Planejamento Estratégico', 'Gestão por Indicadores', 'Tomada de Decisão']
+    },
+    {
       role: 'Desenvolvedor Full Stack Autônomo',
       company: 'Freelancer',
       period: '2023 – Presente',
